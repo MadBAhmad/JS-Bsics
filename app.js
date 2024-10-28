@@ -132,3 +132,65 @@ function checkPositive(num){
 }
 console.log(checkPositive(100000000000000006));
 console.log(checkPositive(13));
+
+console.log('Practice 1')
+
+// function calculateSalary(name, salary)
+// {
+//     let tds = salary * 0.2;
+//     let inhand = salary - tds;
+//     return inhand;
+// }
+// let inhand = calculateSalary('Ahmad', 120000);
+// console.log(inhand);
+
+//Employee DataBase. Where employees are grouped in band with reference to their salary
+
+let employees = [
+    { name: 'Ahmad', designation: 'Software Tester', salary: 120000, sex: 'Male', Location: 'Bangalore', employeeID: 101, branch: 'IT' },
+
+    { name: 'Sara', designation: 'Frontend Developer', salary: 150000, sex: 'Female', Location: 'Mumbai', employeeID: 102, branch: 'IT' },
+
+    { name: 'John', designation: 'Backend Developer', salary: 160000, sex: 'Male', Location: 'Delhi', employeeID: 103, branch: 'IT' },
+
+    { name: 'Lily', designation: 'HR Manager', salary: 130000, sex: 'Female', Location: 'Chennai', employeeID: 104, branch: 'HR' },
+
+    { name: 'David', designation: 'Product Manager', salary: 180000, sex: 'Male', Location: 'Hyderabad', employeeID: 105, branch: 'Product' },
+
+    { name: 'Sophia', designation: 'Data Analyst', salary: 140000, sex: 'Female', Location: 'Pune', employeeID: 106, branch: 'Analytics' },
+
+    { name: 'Chris', designation: 'Software Engineer', salary: 150000, sex: 'Male', Location: 'Bangalore', employeeID: 107, branch: 'IT' },
+
+    { name: 'Emma', designation: 'Content Writer', salary: 110000, sex: 'Female', Location: 'Mumbai', employeeID: 108, branch: 'Marketing' },
+
+    { name: 'Tom', designation: 'UX Designer', salary: 135000, sex: 'Male', Location: 'Delhi', employeeID: 109, branch: 'Design' },
+
+    { name: 'Anna', designation: 'QA Engineer', salary: 125000, sex: 'Female', Location: 'Chennai', employeeID: 110, branch: 'IT' },
+
+    { name: 'Mike', designation: 'DevOps Engineer', salary: 155000, sex: 'Male', Location: 'Hyderabad', employeeID: 111, branch: 'IT' },
+
+    { name: 'Olivia', designation: 'Social Media Manager', salary: 115000, sex: 'Female', Location: 'Pune', employeeID: 112, branch: 'Marketing' },
+
+    { name: 'Henry', designation: 'Database Administrator', salary: 145000, sex: 'Male', Location: 'Bangalore', employeeID: 113, branch: 'IT' },
+
+    { name: 'Isabella', designation: 'Project Coordinator', salary: 120000, sex: 'Female', Location: 'Mumbai', employeeID: 114, branch: 'Operations' }
+  ]
+  
+  console.log(employees);
+
+  function assignBand(employees){
+    return employees.map(employee =>{
+        if(employee.salary >= 100000 && employee.salary <=135000){
+            return {band:'Band 1'}
+        }
+        else {
+            return {band:'Band 2'}
+        }
+    });
+  }
+
+
+  const updatedEmployee = assignBand(employees);
+  console.log(updatedEmployee[1]);
+//   console.log(updatedEmployee);
+
